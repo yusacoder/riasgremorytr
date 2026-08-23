@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern, premium ve responsive kişisel profil ve bağlantı sitesi.">
+  <title>Profil Loading...</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/avatar.png">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Loading Screen Overlay -->
+  <div id="loading-screen" aria-live="polite" aria-label="Yükleniyor">
+    <div class="spinner-glow" role="status"></div>
+    <p class="loading-text">Profil Yükleniyor...</p>
+  </div>
+
+  <!-- Sidebar Overlay & Mobile Drawer Navigation -->
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <aside id="sidebar-drawer" class="sidebar-drawer" aria-label="Ana Menü" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="dot"></span>
+        <span id="drawer-brand-name">Menü</span>
+      </div>
+      <button id="btn-close-menu" class="btn-glass" aria-label="Menüyü Kapat" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" id="drawer-nav-list" role="navigation" aria-label="Gezinti Menüsü">
+      <!-- Navigation items rendered dynamically from data.json -->
+    </nav>
+
+    <div class="drawer-footer">
+      <p id="drawer-footer-text">© 2026 Tüm hakları saklıdır.</p>
+    </div>
+  </aside>
+
+  <!-- Main Application Layout -->
+  <div class="app-container">
+    <!-- Top Site Header -->
+    <header class="site-header">
+      <a href="#home" class="brand-logo" aria-label="Ana Sayfa">
+        <span class="dot"></span>
+        <span id="header-brand-name">Profil</span>
+      </a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-glass" aria-label="Tema Değiştir" type="button">
+          <svg id="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Moon / Sun icon inserted via JS -->
+          </svg>
+        </button>
+        <button id="btn-open-menu" class="btn-glass" aria-label="Menüyü Aç" aria-expanded="false" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Views (SPA Views) -->
+    <main id="main-content">
+
+      <!-- View 1: Home / Profile & Links -->
+      <section id="view-home" class="section-view active" aria-labelledby="profile-name">
+        <div class="profile-card">
+          <div class="hero-logo-container">
+            <div class="hero-logo-ring" aria-hidden="true"></div>
+            <img id="profile-avatar" class="hero-logo" src="assets/avatar.png" alt="Profil Fotoğrafı">
+          </div>
+
+          <div class="profile-name-row">
+            <h1 id="profile-name" class="profile-name">Yükleniyor...</h1>
+            <span id="verified-badge" class="verified-badge" title="Onaylı Profil" style="display: none;" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </span>
+          </div>
+
+          <p id="profile-username" class="profile-username">@kullanici</p>
+          <p id="profile-bio" class="profile-bio">Profil açıklaması yükleniyor...</p>
+        </div>
+
+        <!-- Links Container -->
+        <div id="links-container" class="links-container" role="list">
+          <!-- Link cards dynamically rendered here -->
+        </div>
+      </section>
+
+      <!-- View 2: Projects Placeholder View -->
+      <section id="view-projects" class="section-view" aria-labelledby="projects-title">
+        <div class="placeholder-view">
+          <div class="placeholder-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+            </svg>
+          </div>
+          <h2 id="projects-title" class="placeholder-title">Projeler</h2>
+          <p class="placeholder-text">Bu bölüm yakında aktif olacak.</p>
+          <div id="projects-grid" class="placeholder-grid">
+            <!-- Project items rendered dynamically if present in JSON -->
+          </div>
+        </div>
+      </section>
+
+      <!-- View 3: Sponsors Placeholder View -->
+      <section id="view-sponsors" class="section-view" aria-labelledby="sponsors-title">
+        <div class="placeholder-view">
+          <div class="placeholder-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <h2 id="sponsors-title" class="placeholder-title">Sponsorlar</h2>
+          <p class="placeholder-text">Bu bölüm yakında aktif olacak.</p>
+          <div id="sponsors-grid" class="placeholder-grid">
+            <!-- Sponsor items rendered dynamically if present in JSON -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Error State View -->
+      <div id="error-view" class="error-banner" style="display: none;" role="alert">
+        <h3>Profil verileri yüklenemedi</h3>
+        <p>Lütfen daha sonra tekrar deneyin veya sistem yöneticisi ile iletişime geçin.</p>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p id="footer-text">© 2026 Tüm hakları saklıdır.</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript App Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
