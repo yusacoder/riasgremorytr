@@ -2,65 +2,50 @@
   "profile": {
     "name": "Rias Gremory TR",
     "username": "@rias.gremory_tr",
-    "bio": "Rias Gremory TR, High School DxD içerikleri, cosplay videoları, anime editleri ve Rias Gremory odaklı paylaşımlar hazırlayan bir içerik platformudur. Anime dünyasından çeşitli içerikler ve daha fazlası için takipte kalabilirsiniz."
-    ,
+    "bio": "Rias Gremory TR, High School DxD içerikleri, cosplay videoları, anime editleri ve Rias Gremory odaklı paylaşımlar hazırlayan bir içerik platformudur. Anime dünyasından çeşitli içerikler ve daha fazlası için takipte kalabilirsiniz.",
     "avatar": "assets/avatar.png",
     "verified": true
   },
 
   "links": [
     {
-      "title": "GitHub",
-      "description": "Açık kaynak projelerim ve kod depom",
-      "url": "https://github.com/yusacoder",
-      "icon": "github",
-      "image": ""
-    },
-    {
-      "title": "LinkedIn",
-      "description": "Profesyonel ağım ve kariyerim",
-      "url": "https://linkedin.com/in/yusacoder",
-      "icon": "linkedin",
-      "image": ""
-    },
-    {
-      "title": "Twitter / X",
-      "description": "Günlük düşüncelerim ve teknoloji haberleri",
-      "url": "https://x.com/yusacoder",
-      "icon": "twitter",
-      "image": ""
-    },
-    {
       "title": "Instagram",
-      "description": "Fotoğraflar ve günlük paylaşımlar",
-      "url": "https://instagram.com/yusacoder",
+      "description": "Rias Gremory TR Instagram hesabı",
+      "url": "https://instagram.com/rias.gremory_tr",
       "icon": "instagram",
       "image": ""
     },
     {
+      "title": "TikTok",
+      "description": "Cosplay videoları ve anime içerikleri",
+      "url": "",
+      "icon": "music",
+      "image": ""
+    },
+    {
       "title": "YouTube",
-      "description": "Yazılım ve teknoloji içerikli videolarım",
-      "url": "https://youtube.com/@yusacoder",
+      "description": "High School DxD ve anime içerikleri",
+      "url": "",
       "icon": "youtube",
       "image": ""
     },
     {
-      "title": "Kişisel Web Sitesi",
-      "description": "Portfolyom ve blog yazılarım",
-      "url": "https://yusa.dev",
-      "icon": "globe",
-      "image": ""
-    },
-    {
-      "title": "Discord Sunucusu",
-      "description": "Yazılımcı topluluğumuza katılın",
-      "url": "https://discord.gg/example",
+      "title": "Discord",
+      "description": "Anime topluluğumuza katılın",
+      "url": "",
       "icon": "discord",
       "image": ""
     },
     {
-      "title": "Gelecek Proje (Örnek Pasif Link)",
-      "description": "Yakında yayında olacak yeni projemiz",
+      "title": "Eternal Production",
+      "description": "İçerik üreticileri ve dijital yetenekler platformu",
+      "url": "https://eternalproduction.net/",
+      "icon": "globe",
+      "image": ""
+    },
+    {
+      "title": "High School DxD",
+      "description": "High School DxD hakkında içerikler ve paylaşımlar",
       "url": "",
       "icon": "sparkles",
       "image": ""
@@ -76,13 +61,13 @@
     },
     {
       "id": "projects",
-      "title": "Projeler",
+      "title": "İçerikler",
       "url": "#projects",
       "icon": "folder"
     },
     {
       "id": "sponsors",
-      "title": "Sponsorlar",
+      "title": "Destek",
       "url": "#sponsors",
       "icon": "heart"
     }
@@ -90,34 +75,41 @@
 
   "projects": [
     {
-      "title": "Linktree Klonu",
-      "description": "Glassmorphism tasarımına sahip modern profil sitesi",
-      "tags": ["HTML", "CSS", "JavaScript"],
-      "url": "https://github.com/yusacoder/linktree-clone",
-      "badge": "Tamamlandı"
+      "title": "Rias Gremory İçerikleri",
+      "description": "Rias Gremory ve High School DxD odaklı anime içerikleri ve paylaşımlar",
+      "tags": ["Rias Gremory", "High School DxD", "Anime"],
+      "url": "",
+      "badge": "Aktif"
     },
     {
-      "title": "AI Assistant UI",
-      "description": "Yapay zeka modelleri için modern arayüz bileşeni",
-      "tags": ["React", "Tailwind", "API"],
+      "title": "Cosplay Videoları",
+      "description": "Rias Gremory ve anime karakterleri temalı cosplay videoları",
+      "tags": ["Cosplay", "Anime", "Video"],
       "url": "",
-      "badge": "Yakında"
+      "badge": "Aktif"
+    },
+    {
+      "title": "Anime Editleri",
+      "description": "Rias Gremory ve farklı anime serileri için hazırlanan editler",
+      "tags": ["Anime", "Edit", "AMV"],
+      "url": "",
+      "badge": "Aktif"
     }
   ],
 
   "sponsors": [
     {
-      "name": "Sponsor Olun",
-      "description": "Projelerimi desteklemek ve ayrıcalıklardan yararlanmak için sponsor olabilirsiniz.",
-      "url": "https://github.com/sponsors/yusacoder",
-      "tier": "Gold Sponsor"
+      "name": "Eternal Production",
+      "description": "Rias Gremory TR'nin bağlı olduğu içerik üreticileri ve dijital yetenekler platformu.",
+      "url": "https://eternalproduction.net/",
+      "tier": "Partner"
     }
   ],
 
   "settings": {
-    "siteTitle": "Yuşa Yalın | Bağlantılar & Profil",
+    "siteTitle": "Rias Gremory TR | Bağlantılar & Profil",
     "theme": "dark",
     "accentColor": "#ff2a5f",
-    "footerText": "© 2026 Yuşa Yalın. Tüm hakları saklıdır."
+    "footerText": "© 2026 Rias Gremory TR. Tüm hakları saklıdır."
   }
 }
