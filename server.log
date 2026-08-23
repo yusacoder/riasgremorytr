@@ -1,0 +1,12 @@
+127.0.0.1 - - [23/Aug/2026 18:43:58] "HEAD /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:43:58] "GET /data/data.json HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:10] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:10] "GET /assets/avatar.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:10] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:11] "GET /data/data.json HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:15] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:15] "GET /assets/avatar.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:15] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Aug/2026 18:45:15] "GET /data/data.json HTTP/1.1" 200 -

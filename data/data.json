@@ -1,0 +1,122 @@
+{
+  "profile": {
+    "name": "Yuşa Yalın",
+    "username": "@yusacoder",
+    "bio": "Yazılım Geliştirici & Tasarımcı | Modern Web Teknolojileri & UI/UX",
+    "avatar": "assets/avatar.png",
+    "verified": true
+  },
+
+  "links": [
+    {
+      "title": "GitHub",
+      "description": "Açık kaynak projelerim ve kod depom",
+      "url": "https://github.com/yusacoder",
+      "icon": "github",
+      "image": ""
+    },
+    {
+      "title": "LinkedIn",
+      "description": "Profesyonel ağım ve kariyerim",
+      "url": "https://linkedin.com/in/yusacoder",
+      "icon": "linkedin",
+      "image": ""
+    },
+    {
+      "title": "Twitter / X",
+      "description": "Günlük düşüncelerim ve teknoloji haberleri",
+      "url": "https://x.com/yusacoder",
+      "icon": "twitter",
+      "image": ""
+    },
+    {
+      "title": "Instagram",
+      "description": "Fotoğraflar ve günlük paylaşımlar",
+      "url": "https://instagram.com/yusacoder",
+      "icon": "instagram",
+      "image": ""
+    },
+    {
+      "title": "YouTube",
+      "description": "Yazılım ve teknoloji içerikli videolarım",
+      "url": "https://youtube.com/@yusacoder",
+      "icon": "youtube",
+      "image": ""
+    },
+    {
+      "title": "Kişisel Web Sitesi",
+      "description": "Portfolyom ve blog yazılarım",
+      "url": "https://yusa.dev",
+      "icon": "globe",
+      "image": ""
+    },
+    {
+      "title": "Discord Sunucusu",
+      "description": "Yazılımcı topluluğumuza katılın",
+      "url": "https://discord.gg/example",
+      "icon": "discord",
+      "image": ""
+    },
+    {
+      "title": "Gelecek Proje (Örnek Pasif Link)",
+      "description": "Yakında yayında olacak yeni projemiz",
+      "url": "",
+      "icon": "sparkles",
+      "image": ""
+    }
+  ],
+
+  "navigation": [
+    {
+      "id": "home",
+      "title": "Ana Sayfa",
+      "url": "#home",
+      "icon": "home"
+    },
+    {
+      "id": "projects",
+      "title": "Projeler",
+      "url": "#projects",
+      "icon": "folder"
+    },
+    {
+      "id": "sponsors",
+      "title": "Sponsorlar",
+      "url": "#sponsors",
+      "icon": "heart"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Linktree Klonu",
+      "description": "Glassmorphism tasarımına sahip modern profil sitesi",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "url": "https://github.com/yusacoder/linktree-clone",
+      "badge": "Tamamlandı"
+    },
+    {
+      "title": "AI Assistant UI",
+      "description": "Yapay zeka modelleri için modern arayüz bileşeni",
+      "tags": ["React", "Tailwind", "API"],
+      "url": "",
+      "badge": "Yakında"
+    }
+  ],
+
+  "sponsors": [
+    {
+      "name": "Sponsor Olun",
+      "description": "Projelerimi desteklemek ve ayrıcalıklardan yararlanmak için sponsor olabilirsiniz.",
+      "url": "https://github.com/sponsors/yusacoder",
+      "tier": "Gold Sponsor"
+    }
+  ],
+
+  "settings": {
+    "siteTitle": "Yuşa Yalın | Bağlantılar & Profil",
+    "theme": "dark",
+    "accentColor": "#ff2a5f",
+    "footerText": "© 2026 Yuşa Yalın. Tüm hakları saklıdır."
+  }
+}
