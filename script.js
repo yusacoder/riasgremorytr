@@ -150,7 +150,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bioEl) bioEl.textContent = profile.bio || '';
 
     if (avatarEl && profile.avatar) {
-      avatarEl.src = profile.avatar;
+      let avatarUrl = profile.avatar.trim();
+      if (!avatarUrl.startsWith('http://') && !avatarUrl.startsWith('https://') && !avatarUrl.startsWith('assets/') && !avatarUrl.startsWith('./') && !avatarUrl.startsWith('/')) {
+        avatarUrl = 'https://' + avatarUrl;
+      }
+      avatarEl.onerror = () => {
+        avatarEl.onerror = null;
+        avatarEl.src = 'assets/avatar.png';
+      };
+      avatarEl.src = avatarUrl;
       avatarEl.alt = `${profile.name || 'Profil'} Fotoğrafı`;
     }
 
