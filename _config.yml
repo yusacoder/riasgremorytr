@@ -1,0 +1,9 @@
+# Jekyll configuration for static site deployment on GitHub Pages
+include:
+  - data
+exclude:
+  - _site
+  - .git
+  - .github
+  - node_modules
+  - server.log

@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // SVG Icon Map for predefined social platforms and UI elements
   const SVG_ICONS = {
     instagram: '<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>',
+    tiktok: '<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.28-2.82.78-5.71 2.82-7.62 1.48-1.38 3.51-2.12 5.53-2.02.01 1.46-.01 2.92 0 4.38-.85-.09-1.72.13-2.45.58-1.1.66-1.8 1.88-1.8 3.16.02 1.19.64 2.3 1.63 2.96.98.66 2.25.82 3.35.43 1.12-.39 2-1.34 2.28-2.5.15-.65.17-1.33.16-2 .01-6.81.01-13.62.01-20.43z"/>',
+    spotify: '<path d="M12 0C5.376 0 0 5.377 0 12s5.376 12 12 12 12-5.377 12-12S18.624 0 12 0zm5.521 17.341c-.217.357-.681.469-1.038.25-2.846-1.739-6.429-2.132-10.652-1.168-.403.093-.807-.161-.901-.564-.092-.403.161-.806.564-.9 4.623-1.057 8.583-.615 11.777 1.336.357.22.469.683.25 1.046zm1.472-3.275c-.273.444-.852.584-1.295.311-3.257-2.002-8.223-2.583-12.078-1.413-.5.152-1.033-.131-1.185-.632-.152-.5.132-1.033.633-1.185 4.41-1.338 9.888-.7 13.614 1.594.444.273.585.852.311 1.295zm.136-3.41c-3.906-2.319-10.354-2.533-14.127-1.388-.6.183-1.238-.163-1.421-.763-.183-.601.163-1.238.763-1.421 4.332-1.315 11.448-1.057 15.91 1.59.54.32.718 1.025.398 1.565-.32.539-1.025.718-1.523.417z"/>',
     youtube: '<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>',
     github: '<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>',
     twitter: '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>',
@@ -81,14 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function initTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    themeIcon.innerHTML = currentTheme === 'light' ? SVG_ICONS.moon : SVG_ICONS.sun;
+    if (themeIcon) {
+      themeIcon.innerHTML = currentTheme === 'light' ? SVG_ICONS.moon : SVG_ICONS.sun;
+    }
   }
 
   function toggleTheme() {
     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('site_theme', currentTheme);
     document.documentElement.setAttribute('data-theme', currentTheme);
-    themeIcon.innerHTML = currentTheme === 'light' ? SVG_ICONS.moon : SVG_ICONS.sun;
+    if (themeIcon) {
+      themeIcon.innerHTML = currentTheme === 'light' ? SVG_ICONS.moon : SVG_ICONS.sun;
+    }
     showToast(currentTheme === 'light' ? 'Açık tema aktif' : 'Koyu tema aktif');
   }
 
@@ -96,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Toast Notifications
    */
   function showToast(message, isError = false) {
+    if (!toastContainer) return;
     const toast = document.createElement('div');
     toast.className = `toast ${isError ? 'toast-error' : ''}`;
     toast.innerHTML = `<span>${escapeHTML(message)}</span>`;
@@ -114,22 +121,22 @@ document.addEventListener('DOMContentLoaded', () => {
    * Sidebar Mobile Drawer Control
    */
   function openMenu() {
-    sidebarDrawer.classList.add('active');
-    sidebarOverlay.classList.add('active');
-    sidebarDrawer.setAttribute('aria-hidden', 'false');
-    sidebarOverlay.setAttribute('aria-hidden', 'false');
-    btnOpenMenu.setAttribute('aria-expanded', 'true');
-    btnCloseMenu.focus();
+    sidebarDrawer?.classList.add('active');
+    sidebarOverlay?.classList.add('active');
+    sidebarDrawer?.setAttribute('aria-hidden', 'false');
+    sidebarOverlay?.setAttribute('aria-hidden', 'false');
+    btnOpenMenu?.setAttribute('aria-expanded', 'true');
+    btnCloseMenu?.focus();
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    sidebarDrawer.classList.remove('active');
-    sidebarOverlay.classList.remove('active');
-    sidebarDrawer.setAttribute('aria-hidden', 'true');
-    sidebarOverlay.setAttribute('aria-hidden', 'true');
-    btnOpenMenu.setAttribute('aria-expanded', 'false');
-    btnOpenMenu.focus();
+    sidebarDrawer?.classList.remove('active');
+    sidebarOverlay?.classList.remove('active');
+    sidebarDrawer?.setAttribute('aria-hidden', 'true');
+    sidebarOverlay?.setAttribute('aria-hidden', 'true');
+    btnOpenMenu?.setAttribute('aria-expanded', 'false');
+    btnOpenMenu?.focus();
     document.body.style.overflow = '';
   }
 
@@ -145,8 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const avatarEl = document.getElementById('profile-avatar');
     const verifiedEl = document.getElementById('verified-badge');
 
-    if (nameEl) nameEl.textContent = profile.name || 'İsimsiz Kullanıcı';
-    if (usernameEl) usernameEl.textContent = profile.username || '';
+    if (nameEl) nameEl.textContent = profile.name || 'Rias Gremory TR';
+    if (usernameEl) usernameEl.textContent = profile.username || '@rias.gremory_tr';
     if (bioEl) bioEl.textContent = profile.bio || '';
 
     if (avatarEl && profile.avatar) {
@@ -156,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       avatarEl.onerror = () => {
         avatarEl.onerror = null;
-        avatarEl.src = 'assets/avatar.png';
+        avatarEl.src = 'assets/images/riasgremorytr.jpg';
       };
       avatarEl.src = avatarUrl;
       avatarEl.alt = `${profile.name || 'Profil'} Fotoğrafı`;
@@ -176,12 +183,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     container.innerHTML = '';
 
-    if (!Array.isArray(links) || links.length === 0) {
+    // Filter out empty or invalid link objects
+    const validLinks = Array.isArray(links)
+      ? links.filter(l => l && l.title && l.title.trim() !== '' && l.url && l.url.trim() !== '')
+      : [];
+
+    if (validLinks.length === 0) {
       container.innerHTML = '<p style="text-align:center; color:var(--text-muted); font-size:0.9rem;">Gösterilebilecek bağlantı bulunamadı.</p>';
       return;
     }
 
-    links.forEach((link, index) => {
+    validLinks.forEach((link, index) => {
       const isURLValid = isValidURL(link.url);
       const card = document.createElement(isURLValid ? 'a' : 'div');
 
@@ -236,11 +248,30 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function renderNavigation(navigation) {
     const navList = document.getElementById('drawer-nav-list');
-    if (!navList || !Array.isArray(navigation)) return;
+    if (!navList) return;
 
     navList.innerHTML = '';
 
-    navigation.forEach((navItem) => {
+    const validNav = Array.isArray(navigation)
+      ? navigation.filter(n => n && n.title && n.title.trim() !== '')
+      : [];
+
+    if (validNav.length === 0) {
+      navList.innerHTML = `
+        <a href="#home" class="nav-item active">
+          <svg viewBox="0 0 24 24" aria-hidden="true">${SVG_ICONS.home}</svg>
+          <span>Ana Sayfa</span>
+        </a>
+      `;
+      const defaultNav = navList.querySelector('a');
+      defaultNav?.addEventListener('click', (e) => {
+        closeMenu();
+        handleHashRouting('#home');
+      });
+      return;
+    }
+
+    validNav.forEach((navItem) => {
       const a = document.createElement('a');
       a.className = 'nav-item';
       a.href = navItem.url || '#home';
@@ -269,28 +300,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render Projects
     const projectsGrid = document.getElementById('projects-grid');
-    if (projectsGrid && Array.isArray(appData.projects) && appData.projects.length > 0) {
-      projectsGrid.innerHTML = appData.projects.map(p => `
-        <div class="project-card">
-          ${p.badge ? `<span class="project-tag">${escapeHTML(p.badge)}</span>` : ''}
-          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:6px; color:var(--text-primary);">${escapeHTML(p.title)}</h3>
-          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">${escapeHTML(p.description)}</p>
-          ${p.tags ? `<div style="display:flex; gap:6px; flex-wrap:wrap; font-size:0.75rem; color:var(--text-muted);">${p.tags.map(t => `#${escapeHTML(t)}`).join(' ')}</div>` : ''}
-        </div>
-      `).join('');
+    if (projectsGrid) {
+      if (Array.isArray(appData.projects) && appData.projects.length > 0) {
+        projectsGrid.innerHTML = appData.projects.map(p => `
+          <div class="project-card">
+            ${p.badge ? `<span class="project-tag">${escapeHTML(p.badge)}</span>` : ''}
+            <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:6px; color:var(--text-primary);">${escapeHTML(p.title)}</h3>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">${escapeHTML(p.description)}</p>
+            ${p.tags ? `<div style="display:flex; gap:6px; flex-wrap:wrap; font-size:0.75rem; color:var(--text-muted);">${p.tags.map(t => `#${escapeHTML(t)}`).join(' ')}</div>` : ''}
+          </div>
+        `).join('');
+      } else {
+        projectsGrid.innerHTML = '';
+      }
     }
 
     // Render Sponsors
     const sponsorsGrid = document.getElementById('sponsors-grid');
-    if (sponsorsGrid && Array.isArray(appData.sponsors) && appData.sponsors.length > 0) {
-      sponsorsGrid.innerHTML = appData.sponsors.map(s => `
-        <div class="sponsor-card">
-          ${s.tier ? `<span class="project-tag">${escapeHTML(s.tier)}</span>` : ''}
-          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:6px; color:var(--text-primary);">${escapeHTML(s.name)}</h3>
-          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">${escapeHTML(s.description)}</p>
-          ${s.url ? `<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; font-size:0.85rem; text-decoration:none;">Destek Ol →</a>` : ''}
-        </div>
-      `).join('');
+    if (sponsorsGrid) {
+      if (Array.isArray(appData.sponsors) && appData.sponsors.length > 0) {
+        sponsorsGrid.innerHTML = appData.sponsors.map(s => `
+          <div class="sponsor-card">
+            ${s.tier ? `<span class="project-tag">${escapeHTML(s.tier)}</span>` : ''}
+            <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:6px; color:var(--text-primary);">${escapeHTML(s.name)}</h3>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">${escapeHTML(s.description)}</p>
+            ${s.url ? `<a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; font-size:0.85rem; text-decoration:none;">Destek Ol →</a>` : ''}
+          </div>
+        `).join('');
+      } else {
+        sponsorsGrid.innerHTML = '';
+      }
     }
   }
 
@@ -309,11 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerText = document.getElementById('footer-text');
     const drawerFooterText = document.getElementById('drawer-footer-text');
 
-    if (headerBrand && appData.profile?.name) {
+    if (headerBrand && appData?.profile?.name) {
       headerBrand.textContent = appData.profile.name;
     }
 
-    if (drawerBrand && appData.profile?.name) {
+    if (drawerBrand && appData?.profile?.name) {
       drawerBrand.textContent = appData.profile.name;
     }
 
