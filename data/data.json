@@ -6,7 +6,6 @@
     "avatar": "https://photograph.eternalproduction.net/riasgremorytr.jpg",
     "verified": true
   },
-
   "links": [
     {
       "title": "Instagram",
@@ -25,39 +24,14 @@
     {
       "title": "Spotify",
       "description": "Rias Gremory TR Spotify hesabı",
-      "url": "https://open.spotify.com/user/312a5yrwhp7acwln6g2ephbuyfke?si=movVq0n3QhmpCrJg4MA1sA&utm_source=copy-link&sci=spotify%3Acard-config%3A1buuvO5ViPcKJ1Cs79rPMP",
+      "url": "https://open.spotify.com/user/312a5yrwhp7acwln6g2ephbuyfke",
       "icon": "spotify",
-      "image": ""
-    },
-    {
-      "title": "",
-      "description": "",
-      "url": "",
-      "icon": "",
-      "image": ""
-    },
-    {
-      "title": "",
-      "description": "",
-      "url": "",
-      "icon": "",
-      "image": ""
-    },
-    {
-      "title": "",
-      "description": "",
-      "url": "",
-      "icon": "",
       "image": ""
     }
   ],
-
   "navigation": [],
-
   "projects": [],
-
   "sponsors": [],
-
   "settings": {
     "siteTitle": "Rias Gremory TR | Bağlantılar & Profil",
     "theme": "dark",
