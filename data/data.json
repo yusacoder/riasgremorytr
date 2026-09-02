@@ -17,94 +17,46 @@
     },
     {
       "title": "TikTok",
-      "description": "Cosplay videoları ve anime içerikleri",
-      "url": "",
-      "icon": "music",
+      "description": "Rias Gremory TR TikTok hesabı",
+      "url": "https://www.tiktok.com/@rias.gremory_tr",
+      "icon": "tiktok",
       "image": ""
     },
     {
-      "title": "YouTube",
-      "description": "High School DxD ve anime içerikleri",
-      "url": "",
-      "icon": "youtube",
+      "title": "Spotify",
+      "description": "Rias Gremory TR Spotify hesabı",
+      "url": "https://open.spotify.com/user/312a5yrwhp7acwln6g2ephbuyfke?si=movVq0n3QhmpCrJg4MA1sA&utm_source=copy-link&sci=spotify%3Acard-config%3A1buuvO5ViPcKJ1Cs79rPMP",
+      "icon": "spotify",
       "image": ""
     },
     {
-      "title": "Discord",
-      "description": "Anime topluluğumuza katılın",
+      "title": "",
+      "description": "",
       "url": "",
-      "icon": "discord",
+      "icon": "",
       "image": ""
     },
     {
-      "title": "Eternal Production",
-      "description": "İçerik üreticileri ve dijital yetenekler platformu",
-      "url": "https://eternalproduction.net/",
-      "icon": "globe",
+      "title": "",
+      "description": "",
+      "url": "",
+      "icon": "",
       "image": ""
     },
     {
-      "title": "High School DxD",
-      "description": "High School DxD hakkında içerikler ve paylaşımlar",
+      "title": "",
+      "description": "",
       "url": "",
-      "icon": "sparkles",
+      "icon": "",
       "image": ""
     }
   ],
 
-  "navigation": [
-    {
-      "id": "home",
-      "title": "Ana Sayfa",
-      "url": "#home",
-      "icon": "home"
-    },
-    {
-      "id": "projects",
-      "title": "İçerikler",
-      "url": "#projects",
-      "icon": "folder"
-    },
-    {
-      "id": "sponsors",
-      "title": "Destek",
-      "url": "#sponsors",
-      "icon": "heart"
-    }
-  ],
+  "navigation": [],
 
-  "projects": [
-    {
-      "title": "Rias Gremory İçerikleri",
-      "description": "Rias Gremory ve High School DxD odaklı anime içerikleri ve paylaşımlar",
-      "tags": ["Rias Gremory", "High School DxD", "Anime"],
-      "url": "",
-      "badge": "Aktif"
-    },
-    {
-      "title": "Cosplay Videoları",
-      "description": "Rias Gremory ve anime karakterleri temalı cosplay videoları",
-      "tags": ["Cosplay", "Anime", "Video"],
-      "url": "",
-      "badge": "Aktif"
-    },
-    {
-      "title": "Anime Editleri",
-      "description": "Rias Gremory ve farklı anime serileri için hazırlanan editler",
-      "tags": ["Anime", "Edit", "AMV"],
-      "url": "",
-      "badge": "Aktif"
-    }
-  ],
+  "projects": [],
 
-  "sponsors": [
-    {
-      "name": "Eternal Production",
-      "description": "Rias Gremory TR'nin bağlı olduğu içerik üreticileri ve dijital yetenekler platformu.",
-      "url": "https://eternalproduction.net/",
-      "tier": "Partner"
-    }
-  ],
+  "sponsors": [],
 
   "settings": {
     "siteTitle": "Rias Gremory TR | Bağlantılar & Profil",
