@@ -175,6 +175,54 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
+   * Render Account Suspension Banner
+   */
+  function renderSuspension(suspension) {
+    const banner = document.getElementById('suspension-banner');
+    const badgeEl = document.getElementById('suspension-badge');
+    const titleEl = document.getElementById('suspension-title');
+    const descEl = document.getElementById('suspension-description');
+    const noticeEl = document.getElementById('suspension-notice');
+    const linksContainer = document.getElementById('links-container');
+
+    if (!banner) return;
+
+    if (suspension && suspension.active) {
+      if (badgeEl) {
+        badgeEl.textContent = suspension.badge || 'HESAP ASKIYA ALINDI';
+      }
+      if (titleEl) {
+        titleEl.textContent = suspension.title || 'Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı';
+      }
+      if (descEl) {
+        descEl.textContent = suspension.description || 'Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap geçici olarak askıya alınmıştır.';
+      }
+      if (noticeEl) {
+        if (suspension.notice && suspension.notice.trim() !== '') {
+          noticeEl.textContent = suspension.notice;
+          noticeEl.style.display = 'block';
+        } else {
+          noticeEl.style.display = 'none';
+        }
+      }
+
+      banner.style.display = 'flex';
+
+      // Optionally hide or keep links based on configuration
+      if (linksContainer && suspension.hideLinks) {
+        linksContainer.style.display = 'none';
+      } else if (linksContainer) {
+        linksContainer.style.display = 'flex';
+      }
+    } else {
+      banner.style.display = 'none';
+      if (linksContainer) {
+        linksContainer.style.display = 'flex';
+      }
+    }
+  }
+
+  /**
    * Render Links
    */
   function renderLinks(links) {
@@ -415,6 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Render content
       renderProfile(appData.profile);
+      renderSuspension(appData.suspension);
       renderLinks(appData.links);
       renderNavigation(appData.navigation);
       renderPlaceholders();

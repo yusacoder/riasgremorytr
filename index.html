@@ -91,6 +91,21 @@
           <p id="profile-bio" class="profile-bio"></p>
         </div>
 
+        <!-- Account Suspension Banner (Managed via data.json) -->
+        <section id="suspension-banner" class="suspension-banner" style="display: none;" role="alert" aria-live="assertive">
+          <div class="suspension-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"/>
+            </svg>
+          </div>
+          <div class="suspension-content">
+            <span id="suspension-badge" class="suspension-badge">HESAP ASKIYA ALINDI</span>
+            <h2 id="suspension-title" class="suspension-title">Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı</h2>
+            <p id="suspension-description" class="suspension-description"></p>
+            <p id="suspension-notice" class="suspension-notice" style="display: none;"></p>
+          </div>
+        </section>
+
         <!-- Links Container -->
         <div id="links-container" class="links-container" role="list">
           <!-- Link cards dynamically rendered here -->
