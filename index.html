@@ -101,7 +101,33 @@
           <div class="suspension-content">
             <span id="suspension-badge" class="suspension-badge">HESAP ASKIYA ALINDI</span>
             <h2 id="suspension-title" class="suspension-title">Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı</h2>
+
+            <!-- Suspending Party Profile Card (Dynamic via data.json) -->
+            <div id="suspension-author-card" class="suspension-author-card" style="display: none;">
+              <a id="suspension-author-link" class="suspension-author-link" href="#" target="_blank" rel="noopener noreferrer">
+                <img id="suspension-author-avatar" class="suspension-author-avatar" src="" alt="Askıya Alan Kişi Profil Fotoğrafı">
+                <div class="suspension-author-info">
+                  <span id="suspension-author-label" class="suspension-author-label">Hesabı Askıya Alan</span>
+                  <span id="suspension-author-name" class="suspension-author-name"></span>
+                  <span id="suspension-author-username" class="suspension-author-username"></span>
+                </div>
+                <div class="suspension-author-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </div>
+              </a>
+            </div>
+
             <p id="suspension-description" class="suspension-description"></p>
+
+            <!-- Explanation / Description Link -->
+            <div id="suspension-link-container" class="suspension-link-container" style="display: none;">
+              <a id="suspension-action-link" class="suspension-action-link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="suspension-action-link-text">Askı Nedeni & Açıklama Linki</span>
+                <svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+              </a>
+            </div>
+
             <p id="suspension-notice" class="suspension-notice" style="display: none;"></p>
           </div>
         </section>
