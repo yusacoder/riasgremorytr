@@ -97,8 +97,14 @@ Hesabın askıya alındığını bildiren kırmızı glassmorphism uyarı kutusu
   "badge": "HESAP ASKIYA ALINDI",
   "title": "Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı",
   "description": "Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap geçici olarak askıya alınmıştır.",
-  "notice": "Detaylı bilgi ve itirazlar için lütfen ETERNAL PRODUCTION ile iletişime geçiniz.",
-  "hideLinks": true
+  "notice": "Detaylı bilgi ve itirazlar için lütfen yetkili kişi veya ETERNAL PRODUCTION ile iletişime geçiniz.",
+  "hideLinks": true,
+  "issuer": {
+    "name": "ETERNAL PRODUCTİON - RUBY",
+    "username": "@eternalproduction",
+    "avatar": "https://photograph.eternalproduction.net/riasgremorytr.jpg",
+    "url": "https://eternalproduction.net/"
+  }
 }
 ```
 
@@ -106,6 +112,11 @@ Hesabın askıya alındığını bildiren kırmızı glassmorphism uyarı kutusu
 * **`badge`**: Kartın üstündeki etiket metni (varsayılan: `"HESAP ASKIYA ALINDI"`).
 * **`title`**: Ana başlık metni (örnek: `"Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı"`).
 * **`description`**: Askıya alınma gerekçesi ve detaylı açıklama.
+* **`issuer`**: Hesabı askıya alan kişi veya ekibin bilgileri:
+  * **`issuer.name`**: Askıya alan yetkilinin adı / unvanı.
+  * **`issuer.username`**: Yetkilinin kullanıcı adı (örn: `@eternalproduction`).
+  * **`issuer.avatar`**: Yetkilinin profil fotoğrafı URL'si.
+  * **`issuer.url`**: Yetkilinin tıklanabilir profil bağlantısı linki ("Profili İncele" butonu).
 * **`notice`**: İletişim veya bilgilendirme notu (isteğe bağlı, boş bırakılırsa gizlenir).
 * **`hideLinks`**: `true` yapıldığında bağlantılar askı süresince gizlenir; `false` yapılırsa bağlantılar uyarının altında görünmeye devam eder.
 

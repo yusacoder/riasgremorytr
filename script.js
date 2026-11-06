@@ -197,6 +197,56 @@ document.addEventListener('DOMContentLoaded', () => {
       if (descEl) {
         descEl.textContent = suspension.description || 'Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap geçici olarak askıya alınmıştır.';
       }
+
+      // Render Issuer Profile Card
+      const issuerCard = document.getElementById('suspension-issuer-card');
+      const issuerAvatar = document.getElementById('issuer-avatar');
+      const issuerName = document.getElementById('issuer-name');
+      const issuerUsername = document.getElementById('issuer-username');
+      const issuerLink = document.getElementById('issuer-link');
+
+      if (issuerCard && suspension.issuer) {
+        const issuer = suspension.issuer;
+        let hasIssuerContent = false;
+
+        if (issuerName && issuer.name) {
+          issuerName.textContent = issuer.name;
+          hasIssuerContent = true;
+        }
+
+        if (issuerUsername && issuer.username) {
+          issuerUsername.textContent = issuer.username;
+          hasIssuerContent = true;
+        } else if (issuerUsername) {
+          issuerUsername.textContent = '';
+        }
+
+        if (issuerAvatar) {
+          if (issuer.avatar && issuer.avatar.trim() !== '') {
+            issuerAvatar.src = issuer.avatar.trim();
+            issuerAvatar.alt = `${issuer.name || 'Yetkili'} Profil Fotoğrafı`;
+            issuerAvatar.parentElement.style.display = 'block';
+          } else {
+            issuerAvatar.parentElement.style.display = 'none';
+          }
+        }
+
+        if (issuerLink) {
+          const issuerUrl = issuer.url || issuer.profileUrl;
+          if (issuerUrl && isValidURL(issuerUrl)) {
+            issuerLink.href = issuerUrl;
+            issuerLink.style.display = 'inline-flex';
+            hasIssuerContent = true;
+          } else {
+            issuerLink.style.display = 'none';
+          }
+        }
+
+        issuerCard.style.display = hasIssuerContent ? 'flex' : 'none';
+      } else if (issuerCard) {
+        issuerCard.style.display = 'none';
+      }
+
       if (noticeEl) {
         if (suspension.notice && suspension.notice.trim() !== '') {
           noticeEl.textContent = suspension.notice;

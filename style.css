@@ -514,6 +514,112 @@ body {
   line-height: 1.55;
 }
 
+/* Suspension Issuer Card */
+.suspension-issuer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 42, 95, 0.25);
+  border-radius: var(--border-radius-md);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.suspension-issuer-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 42, 95, 0.45);
+}
+
+.issuer-avatar-wrapper {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+  background-color: var(--bg-secondary);
+}
+
+.issuer-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.issuer-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.issuer-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.issuer-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.issuer-username {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.issuer-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--border-radius-full);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.issuer-profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 42, 95, 0.5);
+  color: #ffffff;
+}
+
+.issuer-profile-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.issuer-profile-btn:hover svg {
+  transform: translateX(3px);
+}
+
 .suspension-notice {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -942,5 +1048,22 @@ body {
 
   .link-description {
     font-size: 0.78rem;
+  }
+
+  .suspension-issuer-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .issuer-info {
+    align-items: center;
+  }
+
+  .issuer-profile-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
