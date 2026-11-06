@@ -185,6 +185,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const noticeEl = document.getElementById('suspension-notice');
     const linksContainer = document.getElementById('links-container');
 
+    // Suspending party author card elements
+    const authorCard = document.getElementById('suspension-author-card');
+    const authorLink = document.getElementById('suspension-author-link');
+    const authorAvatar = document.getElementById('suspension-author-avatar');
+    const authorName = document.getElementById('suspension-author-name');
+    const authorUsername = document.getElementById('suspension-author-username');
+
+    // Description action link elements
+    const linkContainer = document.getElementById('suspension-link-container');
+    const actionLink = document.getElementById('suspension-action-link');
+    const actionLinkText = document.getElementById('suspension-action-link-text');
+
     if (!banner) return;
 
     if (suspension && suspension.active) {
@@ -204,6 +216,71 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           noticeEl.style.display = 'none';
         }
+      }
+
+      // Render Suspending Party Info (Profile & Username with link)
+      const suspendedBy = suspension.suspendedBy;
+      if (authorCard && suspendedBy && (suspendedBy.name || suspendedBy.username)) {
+        if (authorName) {
+          authorName.textContent = suspendedBy.name || 'Yetkili';
+        }
+        if (authorUsername) {
+          authorUsername.textContent = suspendedBy.username || '';
+          authorUsername.style.display = suspendedBy.username ? 'block' : 'none';
+        }
+        if (authorAvatar) {
+          if (suspendedBy.avatar && suspendedBy.avatar.trim() !== '') {
+            let avatarUrl = suspendedBy.avatar.trim();
+            if (!avatarUrl.startsWith('http://') && !avatarUrl.startsWith('https://') && !avatarUrl.startsWith('assets/') && !avatarUrl.startsWith('./') && !avatarUrl.startsWith('/')) {
+              avatarUrl = 'https://' + avatarUrl;
+            }
+            authorAvatar.onerror = () => {
+              authorAvatar.onerror = null;
+              authorAvatar.src = 'assets/images/riasgremorytr.jpg';
+            };
+            authorAvatar.src = avatarUrl;
+            authorAvatar.style.display = 'block';
+          } else {
+            authorAvatar.style.display = 'none';
+          }
+          authorAvatar.alt = `${suspendedBy.name || 'Yetkili'} Profil Fotoğrafı`;
+        }
+        if (authorLink) {
+          const profileUrl = suspendedBy.url || suspendedBy.profileUrl;
+          if (profileUrl && isValidURL(profileUrl)) {
+            authorLink.href = profileUrl;
+            authorLink.target = profileUrl.startsWith('#') ? '_self' : '_blank';
+            if (!profileUrl.startsWith('#')) {
+              authorLink.rel = 'noopener noreferrer';
+            }
+            authorLink.style.pointerEvents = 'auto';
+            authorLink.style.cursor = 'pointer';
+            authorLink.setAttribute('aria-label', `${suspendedBy.name || 'Yetkili'} profiline git`);
+          } else {
+            authorLink.removeAttribute('href');
+            authorLink.style.pointerEvents = 'none';
+            authorLink.style.cursor = 'default';
+          }
+        }
+        authorCard.style.display = 'block';
+      } else if (authorCard) {
+        authorCard.style.display = 'none';
+      }
+
+      // Render Description / Notice Link
+      const descUrl = suspension.descriptionUrl || suspension.actionUrl || suspension.url;
+      if (linkContainer && actionLink && descUrl && isValidURL(descUrl)) {
+        actionLink.href = descUrl;
+        actionLink.target = descUrl.startsWith('#') ? '_self' : '_blank';
+        if (!descUrl.startsWith('#')) {
+          actionLink.rel = 'noopener noreferrer';
+        }
+        if (actionLinkText) {
+          actionLinkText.textContent = suspension.descriptionUrlText || suspension.actionUrlText || 'Askı Nedeni & Açıklama Linki';
+        }
+        linkContainer.style.display = 'block';
+      } else if (linkContainer) {
+        linkContainer.style.display = 'none';
       }
 
       banner.style.display = 'flex';

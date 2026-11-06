@@ -2,36 +2,44 @@
   "profile": {
     "name": "Rias Gremory TR",
     "username": "@rias.gremory_tr",
-    "bio": "Rias Gremory TR, High School DxD i\u00e7erikleri, cosplay videolar\u0131, anime editleri ve Rias Gremory odakl\u0131 payla\u015f\u0131mlar haz\u0131rlayan bir i\u00e7erik platformudur. Anime d\u00fcnyas\u0131ndan \u00e7e\u015fitli i\u00e7erikler ve daha fazlas\u0131 i\u00e7in takipte kalabilirsiniz.",
+    "bio": "Rias Gremory TR, High School DxD içerikleri, cosplay videoları, anime editleri ve Rias Gremory odaklı paylaşımlar hazırlayan bir içerik platformudur. Anime dünyasından çeşitli içerikler ve daha fazlası için takipte kalabilirsiniz.",
     "avatar": "https://photograph.eternalproduction.net/riasgremorytr.jpg",
     "verified": true
   },
   "suspension": {
     "active": true,
     "badge": "HESAP ASKIYA ALINDI",
-    "title": "Bu hesap ETERNAL PRODUCT\u0130ON - RUBY taraf\u0131ndan ask\u0131ya al\u0131nd\u0131",
-    "description": "Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap ge\u00e7ici olarak ask\u0131ya al\u0131nm\u0131\u015ft\u0131r.",
-    "notice": "Detayl\u0131 bilgi ve itirazlar i\u00e7in l\u00fctfen ETERNAL PRODUCTION ile ileti\u015fime ge\u00e7iniz.",
-    "hideLinks": true
+    "title": "Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı",
+    "description": "Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap geçici olarak askıya alınmıştır.",
+    "descriptionUrl": "https://eternalproduction.net/",
+    "descriptionUrlText": "Askı Nedeni & Detaylı Açıklama",
+    "notice": "Detaylı bilgi ve itirazlar için lütfen ETERNAL PRODUCTION ile iletişime geçiniz.",
+    "hideLinks": true,
+    "suspendedBy": {
+      "name": "ETERNAL PRODUCTION - RUBY",
+      "username": "@eternalproduction",
+      "avatar": "https://photograph.eternalproduction.net/riasgremorytr.jpg",
+      "url": "https://eternalproduction.net/"
+    }
   },
   "links": [
     {
       "title": "Instagram",
-      "description": "Rias Gremory TR Instagram hesab\u0131",
+      "description": "Rias Gremory TR Instagram hesabı",
       "url": "https://instagram.com/rias.gremory_tr",
       "icon": "instagram",
       "image": ""
     },
     {
       "title": "TikTok",
-      "description": "Rias Gremory TR TikTok hesab\u0131",
+      "description": "Rias Gremory TR TikTok hesabı",
       "url": "https://www.tiktok.com/@rias.gremory_tr",
       "icon": "tiktok",
       "image": ""
     },
     {
       "title": "Spotify",
-      "description": "Rias Gremory TR Spotify hesab\u0131",
+      "description": "Rias Gremory TR Spotify hesabı",
       "url": "https://open.spotify.com/user/312a5yrwhp7acwln6g2ephbuyfke",
       "icon": "spotify",
       "image": ""
@@ -41,9 +49,9 @@
   "projects": [],
   "sponsors": [],
   "settings": {
-    "siteTitle": "Rias Gremory TR | Ba\u011flant\u0131lar & Profil",
+    "siteTitle": "Rias Gremory TR | Bağlantılar & Profil",
     "theme": "dark",
     "accentColor": "#ff2a5f",
-    "footerText": "\u00a9 2026 Rias Gremory TR. T\u00fcm haklar\u0131 sakl\u0131d\u0131r."
+    "footerText": "© 2026 Rias Gremory TR. Tüm hakları saklıdır."
   }
 }
