@@ -14,7 +14,7 @@
     "descriptionUrl": "https://eternalproduction.net/",
     "descriptionUrlText": "Askı Nedeni & Detaylı Açıklama",
     "notice": "Detaylı bilgi ve itirazlar için lütfen ETERNAL PRODUCTION ile iletişime geçiniz.",
-    "hideLinks": false,
+    "hideLinks": true,
     "suspendedBy": {
       "name": "ETERNAL PRODUCTION - RUBY",
       "username": "@RUBY",
