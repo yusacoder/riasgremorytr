@@ -429,6 +429,108 @@ body {
   line-height: 1.6;
 }
 
+/* --- Account Suspension Banner --- */
+.suspension-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 24px 22px;
+  margin: 8px 0 20px 0;
+  width: 100%;
+  background: rgba(255, 42, 95, 0.08);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 42, 95, 0.45);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 32px rgba(255, 42, 95, 0.15), inset 0 0 20px rgba(255, 42, 95, 0.05);
+  animation: suspensionPulse 3s ease-in-out infinite, fadeInUp 0.4s ease-out;
+}
+
+@keyframes suspensionPulse {
+  0%, 100% {
+    border-color: rgba(255, 42, 95, 0.45);
+    box-shadow: 0 10px 32px rgba(255, 42, 95, 0.15), inset 0 0 20px rgba(255, 42, 95, 0.05);
+  }
+  50% {
+    border-color: rgba(255, 42, 95, 0.75);
+    box-shadow: 0 12px 36px rgba(255, 42, 95, 0.3), inset 0 0 30px rgba(255, 42, 95, 0.1);
+  }
+}
+
+.suspension-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  background: rgba(255, 42, 95, 0.15);
+  border: 1px solid rgba(255, 42, 95, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.suspension-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.suspension-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.suspension-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-full);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+.suspension-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.suspension-description {
+  font-size: 0.92rem;
+  color: #fca5a5;
+  line-height: 1.55;
+}
+
+.suspension-notice {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* Light Theme Suspension Adaptations */
+[data-theme="light"] .suspension-banner {
+  background: rgba(255, 42, 95, 0.06);
+  border-color: rgba(255, 42, 95, 0.4);
+}
+
+[data-theme="light"] .suspension-description {
+  color: #b91c1c;
+}
+
 /* --- Link Cards Container --- */
 .links-container {
   display: flex;

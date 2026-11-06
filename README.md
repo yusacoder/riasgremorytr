@@ -87,7 +87,31 @@ Dosya proje dizininde `data/` klasörünün içindedir: `data/data.json`.
 
 ---
 
-### 3. Profil Fotoğrafını Değiştirme
+### 3. Hesap Askıya Alındı (Suspension) Yönetimi
+
+Hesabın askıya alındığını bildiren kırmızı glassmorphism uyarı kutusu `suspension` objesi üzerinden yönetilir:
+
+```json
+"suspension": {
+  "active": true,
+  "badge": "HESAP ASKIYA ALINDI",
+  "title": "Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı",
+  "description": "Reklam tarihi gecikmesi ve mesajlara bakmama sebebiyle bu hesap geçici olarak askıya alınmıştır.",
+  "notice": "Detaylı bilgi ve itirazlar için lütfen ETERNAL PRODUCTION ile iletişime geçiniz.",
+  "hideLinks": true
+}
+```
+
+* **`active`**: Askıya alma uyarısını açıp kapatmak için kullanılır (`true` açar, `false` kapatır).
+* **`badge`**: Kartın üstündeki etiket metni (varsayılan: `"HESAP ASKIYA ALINDI"`).
+* **`title`**: Ana başlık metni (örnek: `"Bu hesap ETERNAL PRODUCTİON - RUBY tarafından askıya alındı"`).
+* **`description`**: Askıya alınma gerekçesi ve detaylı açıklama.
+* **`notice`**: İletişim veya bilgilendirme notu (isteğe bağlı, boş bırakılırsa gizlenir).
+* **`hideLinks`**: `true` yapıldığında bağlantılar askı süresince gizlenir; `false` yapılırsa bağlantılar uyarının altında görünmeye devam eder.
+
+---
+
+### 4. Profil Fotoğrafını Değiştirme
 
 1. Yeni profil fotoğrafınızı `assets/` klasörünün içine yerleştirin (örneğin `assets/yeni-foto.png`).
 2. `data/data.json` dosyasındaki `"avatar"` alanını yeni dosya yoluyla güncelleyin:
@@ -98,7 +122,7 @@ Dosya proje dizininde `data/` klasörünün içindedir: `data/data.json`.
 
 ---
 
-### 4. Yeni Link Ekleme
+### 5. Yeni Link Ekleme
 
 `links` dizisine yeni bir obje ekleyerek anında yeni bir bağlantı kartı oluşturabilirsiniz.
 
@@ -135,7 +159,7 @@ Dosya proje dizininde `data/` klasörünün içindedir: `data/data.json`.
 
 ---
 
-### 5. Link Silme
+### 6. Link Silme
 
 Silmek istediğiniz link objesini `links` dizisinden tamamen kaldırın.
 
@@ -143,7 +167,7 @@ Silmek istediğiniz link objesini `links` dizisinden tamamen kaldırın.
 
 ---
 
-### 6. Menü / Gezinme Sistemi
+### 7. Menü / Gezinme Sistemi
 
 Hamburger menüde ve sidebar üzerinde yer alan bağlantılar `navigation` dizisinden çekilir:
 
@@ -171,7 +195,7 @@ Hamburger menüde ve sidebar üzerinde yer alan bağlantılar `navigation` dizis
 
 ---
 
-### 7. Gelecekte Proje ve Sponsor Ekleme
+### 8. Gelecekte Proje ve Sponsor Ekleme
 
 Şu an Projeler ve Sponsorlar sayfalarında modern placeholder ekranları bulunmaktadır. İleride bu bölümleri dinamik karta dönüştürmek isterseniz `data.json` dosyasına aşağıdaki yapıları ekleyebilirsiniz:
 
